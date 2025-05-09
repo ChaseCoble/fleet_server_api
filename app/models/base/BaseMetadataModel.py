@@ -1,41 +1,64 @@
 from pydantic import BaseModel, Field, ValidationError
-from typing import Union, Optional
-from uuid import UUID
+from typing import Optional, List
+from uuid import uuid4
 from datetime import datetime
-from app import logger
+from models.base import SourceItemModel
 
-class BaseMetadataModel(BaseModel):
-    client_id: Optional[Union[str, UUID]] = Field(
+class BasePromptRequestMetadataModel(BaseModel):
+    date_request_created: datetime = Field(
+        default_factory= lambda x : datetime.now(),
+        description= "Date of prompt creation"
+    )
+    agent_session_id:str = Field(
+        description="Id assigned to each session of agent api"
+    )
+    agent_model:str = Field(
+        description="Descriptive string for which model sent the prompt"
+    )
+    
+
+class BaseDBItemMetadataModel(BasePromptRequestMetadataModel):
+    id: str = Field(
+        alias="client_id",
+        description = "Client side api id for the *set"
+    )
+    db_id: str = Field(
+        default_factory = str(uuid4()),
+        description = "Lancedb specific id"
+    )
+    
+    prompt_sources: List[SourceItemModel] = Field(
+        default = [],
+        description="Sources used in the prompt construction"
+    )
+    response_sources: List[SourceItemModel] = Field(
+        default = [],
+        description="Sources utilized in the response"
+    )
+    date_created: datetime = Field(
+        default_factory= lambda x : datetime.now(),
+        description= "Date of prompt creation"
+    )
+    date_updated: datetime = Field(
+        default_factory = lambda x: datetime.now(),
+        description= "Time last updated"
+    )
+    
+class BaseResponseMetadataModel(BaseModel):
+    response_sources : List[SourceItemModel] = Field(
+        default = [],
+        description="Sources used in responses"
+    )
+class BaseContextMetadataModel(BaseModel):
+    date_created: datetime = Field(
+        default_factory = lambda x : datetime.now(),
+        description = "Date created in db"    
+    )
+    date_updated: Optional[datetime] = Field(
         default = None,
-        description="id from client assignment"
+        description = "Date last updated"
     )
-    client_creation_time: datetime = Field(
+    repeated_semantics: int = Field(
         default = None,
-        description= "Time sent from the client"
+        description = "Number of times a similar context has been extracted"
     )
-    storage_time: datetime = Field(
-        description="Timestamp from storage"
-    )
-    last_retrieval_time: Optional[datetime] = Field(
-        default=None,
-        description = "Last time it was retrieved"
-    )
-    source_url: Optional[str] = Field(
-        default= None,
-        description= "Source of original storage"
-    )
-    arrival_id: Optional[str] = Field(
-        default=None,
-        description="id generated on server arrival"
-    )
-
-def metadata_to_string(metadata: BaseMetadataModel):
-    return metadata.model_dump_json
-
-def string_to_metadata(metadata_str: str):
-    try:
-        metadata_model_instance = BaseMetadataModel.model_validate_json(metadata_str)
-        return metadata_model_instance
-    except ValidationError as e:
-        logger.error(f"Error validating metadata string: {e}")
-        raise

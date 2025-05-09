@@ -1,68 +1,41 @@
-import check_cache
-import store_in_cache
-from models.base import BaseResponseDBItemModel, LanceDBRow, meta
+from cache_functions import check_cache, update_metadata_access_time
+from models.base import BasePromptResponseDBItemModel, BasePromptRequestItem
 from uuid import uuid4
 from datetime import datetime
+from fastapi import HTTPException
 """
     Precondition:
-        request : string for cache testing
-        session_globals: Global state object containing logger and app-wide constants
-        isContext: isBoolean, indicates whether data is context
-        metadata : BaseMetaData object for addition to LanceDB object
-        response_object: Object that holds the list of context hits, context misses, content hits and content misses
-        called by populate_response_object
+        prompt: BasePromptRequestItem of either long, context, short, or content,
+
     Postcondition:
-        Returns original response_object with the lists and metadata populated
+        Returns boolean and BaseResponseDBItemModel
 
 """
 def cache_response_fork(
-        request, 
-        session_globals, 
-        isContext, 
-        metadata, 
-        response_object):
-    if(request):
+        prompt: BasePromptRequestItem, 
+        session_globals,
+        context_id):
+    if(prompt):
         logger = session_globals.logger()
-        #Returns dataframe!
-        request_cache_object, request_vector = check_cache(request=request, session_globals = session_globals)
-        info_string = "Context cache checked" if isContext else "Content cache checked"
+        request_cache_object, prompt_vector, is_dup = check_cache(prompt, session_globals = session_globals, context_id=context_id)   
+        info_string = "Long vector cache checked" if prompt.is_long else "Short content cache checked"
         session_globals.logger.info(info_string)
-        cache_response_item = BaseResponseDBItemModel()
-        cache_response_item.client_id = request.client_id
-        
-        cache_response_item.content = request
+        response_item = BasePromptResponseDBItemModel()
+        response_item.prompt_item_id = prompt.prompt_item_id
+        response_item.is_dup = is_dup
+        response_item.context_id = context_id
+        if prompt.is_long:
+            response_item.vector_long = prompt_vector
+        else:
+            response_item.vector_short = prompt_vector
         if(request_cache_object):
             is_hit = True
             cache_response_item_series = request_cache_object.iloc[0]
-            cache_response_item.request_content = cache_response_item_series['content']
-            cache_response_item.admission_id = cache_response_item_series['id']    
-        
-        
-        ###Correct this logic tomorrow, your brain is slowing and your eyes are strained
+            response_item.prompt_response = cache_response_item_series['content']    
         else:
-            cache_response_item.admission_id =uuid4()
-        if not request_cache_object.is_dup or not request_cache_object:
-            metadata.storage_time = datetime.now()
-            stringified_metadata = metadata.model_dump_to_json
-            db_item = LanceDBRow(
-                id = cache_response_item.admission_id,
-                client_id = cache_response_item.client_id,
-                vector = request_vector,
-                content = request,
-                metadata = stringified_metadata
-             )
-            store_in_cache(db_item)
-        else:
-            cache_response_item.admission_id = uuid4()
+            response_item.is_cache = False
             is_hit = False
-        if isContext and is_hit:
-            response_object.context_hit.append(cache_response_item)
-        elif isContext and not is_hit:
-            response_object.context_miss.append(cache_response_item)
-        elif is_hit:
-            response_object.content_hit.append(cache_response_item)
-        elif not is_hit:
-            response_object.content_mist.append(cache_response_item)
-        else:
-            logger.error("If stack for population of response_object malfunctioning")
-                    
+        return is_hit, response_item
+    else:
+        logger.error("cache response fork called with no prompt")
+        raise HTTPException(status_code="502", detail="Cache response fork called with no prompt")

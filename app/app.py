@@ -8,7 +8,7 @@ import lancedb
 from typing import Optional
 from sentence_transformers import SentenceTransformer
 from app.config.GlobalConfig import GlobalConfig
-from models.base import BaseLanceDBRow
+from models.base import BaseContentLanceDBRow, BaseContextLanceDBRow
 """
     Endpoints required:
         /store = agent_backend => fleetserverapi =>agent_backend for storage of QUERY/ANSWER only returns success code
@@ -22,11 +22,12 @@ session_globals = GlobalConfig()
 logger = session_globals.logger
 LANCEDB_URI = os.getenv("DATABASE_URI")
 TABLE_NAME = os.getenv("TABLE_NAME")
-EMBEDDING_MODEL_NAME = os.getenv("EMBEDDING_MODEL_NAME")
-SIMILARITY_THRESHOLD = os.getenv("SIMILARITY_THRESHOLD")
-session_globals.lance_schema = BaseLanceDBRow()
-
-
+SHORT_EMBEDDING_MODEL_NAME = os.getenv("CONTENT_EMBEDDING_MODEL_NAME")
+LONG_EMBEDDING_MODEL_NAME = os.getenv("CONTEXT_EMBEDDING_MODEL_NAME")
+CONTENT_TABLE_NAME = session_globals.CONTENT_TABLE_NAME
+CONTEXT_TABLE_NAME = session_globals.CONTEXT_TABLE_NAME
+session_globals.lance_content_schema = BaseContentLanceDBRow
+session_globals.lance_context_schema = BaseContextLanceDBRow
 
 @asynccontextmanager
 async def lifecycle(app: FastAPI):
@@ -37,26 +38,37 @@ async def lifecycle(app: FastAPI):
         logger.error("LANCEDB_URI not found")
     session_globals.db = db_connect.connect_database(LANCEDB_URI, logger)
     db = session_globals.db
-    lancedb_schema = session_globals.lance_schema
+    lance_content_schema = session_globals.lance_content_schema
+    lance_context_schema = session_globals.lance_context_schema
     logger.info("LanceDB connection successful.")
     logger.info("Loading Embedding model: ")
     try:
-        session_globals.embedding_model = SentenceTransformer(EMBEDDING_MODEL_NAME)
-        session_globals.vector_dimension = embedding_model.get_sentence_embedding_dimension()
+        session_globals.short_embedding_model = SentenceTransformer(SHORT_EMBEDDING_MODEL_NAME)
+        session_globals.long_embedding_model = SentenceTransformer(LONG_EMBEDDING_MODEL_NAME, trust_remote_code=True)
+        session_globals.vector_dimension_short = session_globals.short_embedding_model.get_sentence_embedding_dimension()
+        session_globals.vector_dimension_long = session_globals.long_embeeding_model.get_sentence_embedding_dimension()
         logger.info(f"Embedding Model Loaded: Vector Dimension: {session_globals.vector_dimension}")
     except Exception as e:
         logger.info(f"Error loading embedding model: {e}")
         raise HTTPException(status_code=500, detail=f"Could not load embedding model: {e}")
     
-    logger.info("Creating or opening table: {TABLE_NAME}")
+    logger.info("Creating or opening table: {CONTENT_TABLE_NAME}")
     try:
-        if TABLE_NAME in db.table_names():
-            table = db.open_table(TABLE_NAME)
-            logger.info(f"Table {TABLE_NAME} created")
-            if not table.schema().equals(lancedb_schema):
+        if CONTENT_TABLE_NAME in db.table_names():
+            table = db.open_table(CONTENT_TABLE_NAME)
+            logger.info(f"Table {CONTENT_TABLE_NAME} opened successfully")
+            if not table.schema().equals(lance_content_schema):
+                logger.warning(f"Existing {CONTENT_TABLE_NAME} Table does not match lancedb schema")
+        else:
+            table = db.create_table(CONTEXT_TABLE_NAME, schema=lance_context_schema)
+            logger.info(f"Table {CONTEXT_TABLE_NAME} created.")
+        if CONTEXT_TABLE_NAME in db.table_names():
+            table = db.open_table(CONTEXT_TABLE_NAME)
+            logger.info(f"Table {CONTEXT_TABLE_NAME} opened successfully")
+            if not table.schema().equals(lance_context_schema):
                 logger.warning("Existing Table does not match lancedb schema")
         else:
-            table = db.create_table(TABLE_NAME, schema=lancedb_schema)
+            table = db.create_table(CONTEXT_TABLE_NAME, schema=lance_context_schema)
             logger.info(f"Table {TABLE_NAME} created.")
         logger.info("Startup Complete")
         yield
@@ -67,10 +79,8 @@ async def lifecycle(app: FastAPI):
         logger.info("Shutting down application.")
         if db:
             db.close()
-        db = None
-        table = None
-        embedding_model = None
-        logger.info("LanceDB Connection closed")
+        session_globals.scrub()
+        logger.info("LanceDB Connection closed, global session state cleared")
 
 
 
