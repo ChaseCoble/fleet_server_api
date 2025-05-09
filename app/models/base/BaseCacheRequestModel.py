@@ -6,10 +6,13 @@ from uuid import UUID, uuid4
 class BaseCacheRequestModel(BaseModel):
     """Model for data recieved from assistant backend.""" 
     id: Union[UUID, str] = Field(
-        default_factory= lambda: str(uuid4()),
         alias="client_id",
         description="id assigned on either agent side or on reception"
 
+    )
+    context_id: Optional[str] = Field(
+        default = None,
+        description="The unique client side id for the context"
     )
     no_cache: bool = Field(
         default = False,
@@ -23,16 +26,30 @@ class BaseCacheRequestModel(BaseModel):
         default_factory=datetime.now, 
         description = "Timestamp created by client, if absent it is created by this api"
     )
-    context: Optional[str] = Field(
-        default = None,
-        description = "Send to API or test as context."
+    context: List[str] = Field(
+        default = [],
+        description = "Context for caching."
 
     )
-    content: Optional[Union[List[str], str]] = Field(
-        default = None,  
+    content: List[str] = Field(
+        default = str,  
     )
     content_url: Optional[str] = Field(
         default = None,
         description = "URL that was scraped for this"
     )
+    additional_instruction: Optional[str] = Field(
+        default= None,
+        description= "String to be added to the context, examples may be education level (Explain the following concept to me in 8th grade terms)"
+    )
+    agent_instruction_is_after: Optional[bool] = Field(
+        default = None,
+        detail="None indicates that the agent_instruction is not iterative, False means it is iterative and before each content item, and True means it is iterative and after each content item"
+    )
+    
+    agent_instruction: Optional[str] = Field(
+        default = None,
+        description = "Agent specific string"
+    )
+    
 

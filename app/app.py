@@ -8,7 +8,7 @@ import lancedb
 from typing import Optional
 from sentence_transformers import SentenceTransformer
 from app.config.GlobalConfig import GlobalConfig
-import pyarrow as pa
+from models.base import BaseLanceDBRow
 """
     Endpoints required:
         /store = agent_backend => fleetserverapi =>agent_backend for storage of QUERY/ANSWER only returns success code
@@ -24,7 +24,7 @@ LANCEDB_URI = os.getenv("DATABASE_URI")
 TABLE_NAME = os.getenv("TABLE_NAME")
 EMBEDDING_MODEL_NAME = os.getenv("EMBEDDING_MODEL_NAME")
 SIMILARITY_THRESHOLD = os.getenv("SIMILARITY_THRESHOLD")
-
+session_globals.lance_schema = BaseLanceDBRow()
 
 
 
@@ -37,6 +37,7 @@ async def lifecycle(app: FastAPI):
         logger.error("LANCEDB_URI not found")
     session_globals.db = db_connect.connect_database(LANCEDB_URI, logger)
     db = session_globals.db
+    lancedb_schema = session_globals.lance_schema
     logger.info("LanceDB connection successful.")
     logger.info("Loading Embedding model: ")
     try:
@@ -46,12 +47,7 @@ async def lifecycle(app: FastAPI):
     except Exception as e:
         logger.info(f"Error loading embedding model: {e}")
         raise HTTPException(status_code=500, detail=f"Could not load embedding model: {e}")
-    lancedb_schema = pa.schema([
-        pa.field("id", pa.string()),
-        pa.field("text", pa.string()),
-        pa.field("vector", pa.list_(pa.float32(), session_globals.vector_dimension)),
-        pa.field("metadata", pa.string(), nullable=True)
-    ])
+    
     logger.info("Creating or opening table: {TABLE_NAME}")
     try:
         if TABLE_NAME in db.table_names():
