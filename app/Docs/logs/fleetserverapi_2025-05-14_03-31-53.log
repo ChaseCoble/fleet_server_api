@@ -1,0 +1,34 @@
+2025-05-14 03:31:53,681 - fleetserverapi - INFO - LANCEDB_URI is databases/lance
+2025-05-14 03:31:53,682 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-14 03:31:53,682 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-14 03:31:53,683 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-14 03:31:53,685 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-14 03:31:53,685 - fleetserverapi - INFO - Sqlite database uri is databases/sqlite/text_content_reference.db
+2025-05-14 03:31:53,688 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-14 03:31:53,722 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-14 03:31:55,278 - fleetserverapi - INFO - Short embedding model created
+2025-05-14 03:31:59,423 - fleetserverapi - INFO - Long embedding model created
+2025-05-14 03:31:59,423 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-14 03:31:59,424 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-14 03:31:59,427 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-14 03:31:59,430 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-14 03:31:59,432 - fleetserverapi - INFO - Startup Complete
+2025-05-14 03:32:07,898 - fleetserverapi - INFO - Post endpoint hit
+2025-05-14 03:32:07,899 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-14 03:32:07,899 - fleetserverapi - INFO - Begins summarizing
+2025-05-14 03:32:23,706 - fleetserverapi - INFO - Completes Summarizationn
+2025-05-14 03:32:52,678 - fleetserverapi - INFO - Cache hit for request 'Please provide me with the text you would like me ...' with distance 1.9958
+2025-05-14 03:32:52,683 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-14 03:32:57,759 - fleetserverapi - INFO - GenAI client obtained from session_globals
+2025-05-14 03:32:58,991 - fleetserverapi - INFO - Context cache created: cachedContents/u80n213gtyqcpo50yl721evrs2lyuubc7ofiul84
+2025-05-14 03:33:10,701 - fleetserverapi - INFO - Prompt task for ID 5f08b338-e3ca-4286-b4b1-31568904b2e9 completed successfully.
+2025-05-14 03:33:10,703 - fleetserverapi - INFO - Prompt task for ID e1837b14-7e21-4283-bf76-5af6067bab87 completed successfully.
+2025-05-14 03:33:10,704 - fleetserverapi - INFO - Prompt task for ID b7ecaa0c-26e9-47b6-9bd7-88cd517f3414 completed successfully.
+2025-05-14 03:33:10,705 - fleetserverapi - INFO - Prompt task for ID 629b594e-d79e-461e-b093-42e422c9ab2d completed successfully.
+2025-05-14 03:33:10,707 - fleetserverapi - INFO - Prompt task for ID 9063cfe3-893d-47b0-b998-9e5db8fe1a2c completed successfully.
+2025-05-14 03:33:10,708 - fleetserverapi - INFO - Prompt iteration finished: All 5 prompts processed successfully.
+2025-05-14 03:33:10,710 - fleetserverapi - INFO - Prompt iteration completed
+2025-05-14 03:33:10,711 - fleetserverapi - INFO - Attempting to delete GENAI cache 'cachedContents/u80n213gtyqcpo50yl721evrs2lyuubc7ofiul84'
+2025-05-14 03:33:11,171 - fleetserverapi - WARNING - Main endpoint failure: Column 1 named vector_short expected length 36 but got length 1
+2025-05-14 03:33:52,425 - fleetserverapi - INFO - Shutting down application.
+2025-05-14 03:33:52,427 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

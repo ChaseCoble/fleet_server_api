@@ -1,0 +1,7 @@
+2025-05-13 21:52:33,999 - fleetserverapi - INFO - LANCEDB_URI is ./databases/lance
+2025-05-13 21:52:33,999 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-13 21:52:33,999 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-13 21:52:34,000 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-13 21:52:34,002 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-13 21:52:34,003 - fleetserverapi - INFO - Sqlite database uri is sqlite:///./databases/sqlite/text_content_reference.db
+2025-05-13 21:52:34,005 - fleetserverapi - ERROR - Failure to connect to sqlite database: unable to open database file

@@ -1,0 +1,19 @@
+2025-05-13 07:02:13,848 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-13 07:02:13,849 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-13 07:02:13,849 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-13 07:02:13,850 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-13 07:02:13,852 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-13 07:02:13,852 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-13 07:02:13,855 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-13 07:02:13,857 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-13 07:02:15,305 - fleetserverapi - INFO - Short embedding model created
+2025-05-13 07:02:18,573 - fleetserverapi - INFO - Long embedding model created
+2025-05-13 07:02:18,574 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-13 07:02:18,574 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-13 07:02:18,578 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-13 07:02:18,582 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-13 07:02:18,585 - fleetserverapi - INFO - Startup Complete
+2025-05-13 07:02:34,173 - fleetserverapi - INFO - Post endpoint hit
+2025-05-13 07:02:34,173 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-13 07:02:34,174 - fleetserverapi - INFO - Begins summarizing
+2025-05-13 07:02:58,973 - fleetserverapi - WARNING - Main endpoint failure: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The service is currently unavailable.', 'status': 'UNAVAILABLE'}}

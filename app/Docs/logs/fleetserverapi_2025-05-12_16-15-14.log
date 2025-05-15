@@ -1,0 +1,20 @@
+2025-05-12 16:15:14,442 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 16:15:14,442 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 16:15:14,443 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 16:15:14,443 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 16:15:14,445 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 16:15:14,446 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 16:15:14,448 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 16:15:14,451 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 16:15:15,791 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 16:15:19,148 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 16:15:19,148 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 16:15:19,148 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 16:15:19,157 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 16:15:19,164 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 16:15:19,169 - fleetserverapi - INFO - Startup Complete
+2025-05-12 16:17:05,762 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 16:17:05,763 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 16:17:39,049 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-12 16:17:42,584 - fleetserverapi - ERROR - error creating GENAI cache: 404 NOT_FOUND. {'error': {'code': 404, 'message': 'models/gemma-3-27b-it is not found for API version v1alpha, or is not supported for createCachedContent. Call ListModels to see the list of available models and their supported methods.', 'status': 'NOT_FOUND'}}
+2025-05-12 16:17:42,584 - fleetserverapi - WARNING - Main endpoint failure: 500: Failed to create GENAI cache

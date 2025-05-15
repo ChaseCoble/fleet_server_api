@@ -1,0 +1,15 @@
+2025-05-13 22:51:05,986 - fleetserverapi - INFO - LANCEDB_URI is databases/lance
+2025-05-13 22:51:05,986 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-13 22:51:05,987 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-13 22:51:05,987 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-13 22:51:05,990 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-13 22:51:05,990 - fleetserverapi - INFO - Sqlite database uri is databases/sqlite/text_content_reference.db
+2025-05-13 22:51:06,007 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-13 22:51:06,026 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-13 22:51:08,650 - fleetserverapi - INFO - Short embedding model created
+2025-05-13 22:51:13,868 - fleetserverapi - INFO - Long embedding model created
+2025-05-13 22:51:13,869 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-13 22:51:13,869 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-13 22:51:13,919 - fleetserverapi - INFO - Table content_vector_data created.
+2025-05-13 22:51:13,935 - fleetserverapi - INFO - Table context_vector_data created.
+2025-05-13 22:51:13,937 - fleetserverapi - INFO - Startup Complete

@@ -10,4 +10,3 @@ def connect_database(db, logger):
         logger.error(error_string + f" -----{datetime.datetime.now()}")
         raise HTTPException(status_code=500, detail = error_string)
     return client
-    

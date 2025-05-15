@@ -1,0 +1,41 @@
+2025-05-14 20:16:11,047 - fleetserverapi - INFO - LANCEDB_URI is databases/lance
+2025-05-14 20:16:11,048 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-14 20:16:11,048 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-14 20:16:11,048 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-14 20:16:11,052 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-14 20:16:11,053 - fleetserverapi - INFO - Sqlite database uri is databases/sqlite/text_content_reference.db
+2025-05-14 20:16:11,057 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-14 20:16:11,101 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-14 20:16:12,956 - fleetserverapi - INFO - Short embedding model created
+2025-05-14 20:16:17,533 - fleetserverapi - INFO - Long embedding model created
+2025-05-14 20:16:17,533 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-14 20:16:17,534 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-14 20:16:17,537 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-14 20:16:17,540 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-14 20:16:17,543 - fleetserverapi - INFO - Startup Complete
+2025-05-14 20:17:37,087 - fleetserverapi - INFO - Post endpoint hit
+2025-05-14 20:17:37,091 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-14 20:17:37,092 - fleetserverapi - INFO - Begins summarizing
+2025-05-14 20:17:42,064 - fleetserverapi - INFO - Post endpoint hit
+2025-05-14 20:17:42,065 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-14 20:17:42,065 - fleetserverapi - INFO - Begins summarizing
+2025-05-14 20:17:45,805 - fleetserverapi - INFO - Post endpoint hit
+2025-05-14 20:17:45,806 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-14 20:17:45,807 - fleetserverapi - INFO - Begins summarizing
+2025-05-14 20:17:55,198 - fleetserverapi - INFO - Post endpoint hit
+2025-05-14 20:17:55,199 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-14 20:17:55,200 - fleetserverapi - INFO - Begins summarizing
+2025-05-14 20:17:58,281 - fleetserverapi - INFO - Post endpoint hit
+2025-05-14 20:17:58,282 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-14 20:17:58,282 - fleetserverapi - INFO - Begins summarizing
+2025-05-14 20:18:09,789 - fleetserverapi - WARNING - Main endpoint failure: 503: Service unavailable
+2025-05-14 20:18:11,317 - fleetserverapi - WARNING - Main endpoint failure: 503: Service unavailable
+2025-05-14 20:18:11,872 - fleetserverapi - WARNING - Main endpoint failure: 503: Service unavailable
+2025-05-14 20:18:15,633 - fleetserverapi - WARNING - Main endpoint failure: 503: Service unavailable
+2025-05-14 20:18:18,765 - fleetserverapi - WARNING - Main endpoint failure: 503: Service unavailable
+2025-05-14 20:28:17,806 - fleetserverapi - INFO - Post endpoint hit
+2025-05-14 20:28:17,807 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-14 20:28:17,808 - fleetserverapi - INFO - Begins summarizing
+2025-05-14 20:33:10,219 - fleetserverapi - WARNING - Main endpoint failure: 503: Service unavailable
+2025-05-14 20:33:40,350 - fleetserverapi - INFO - Shutting down application.
+2025-05-14 20:33:40,351 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

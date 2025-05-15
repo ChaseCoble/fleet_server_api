@@ -1,0 +1,20 @@
+2025-05-12 18:32:17,843 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 18:32:17,843 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 18:32:17,844 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 18:32:17,844 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 18:32:17,847 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 18:32:17,847 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 18:32:17,850 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 18:32:17,853 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 18:32:19,387 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 18:32:22,929 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 18:32:22,930 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 18:32:22,930 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 18:32:22,933 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 18:32:22,937 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 18:32:22,940 - fleetserverapi - INFO - Startup Complete
+2025-05-12 18:32:30,135 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 18:32:30,136 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 18:32:30,136 - fleetserverapi - WARNING - Main endpoint failure: summarize_text() missing 1 required positional argument: 'model'
+2025-05-12 18:33:47,589 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 18:33:47,590 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

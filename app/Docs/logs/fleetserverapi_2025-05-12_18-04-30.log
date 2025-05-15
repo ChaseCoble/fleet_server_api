@@ -1,0 +1,23 @@
+2025-05-12 18:04:30,990 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 18:04:30,990 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 18:04:30,991 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 18:04:30,991 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 18:04:30,993 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 18:04:30,994 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 18:04:30,997 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 18:04:31,000 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 18:04:32,779 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 18:04:37,037 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 18:04:37,038 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 18:04:37,038 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 18:04:37,043 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 18:04:37,048 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 18:04:37,052 - fleetserverapi - INFO - Startup Complete
+2025-05-12 18:04:44,003 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 18:04:44,004 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 18:05:16,829 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-12 18:05:18,657 - fleetserverapi - INFO - GenAI client initialized
+2025-05-12 18:05:23,377 - fleetserverapi - ERROR - Failure to query Gemini model: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'TotalCachedContentStorageTokensPerModelFreeTier limit exceeded for model gemini-1.5-flash: limit=1000000, requested=1546301', 'status': 'RESOURCE_EXHAUSTED'}}
+2025-05-12 18:05:23,377 - fleetserverapi - WARNING - Main endpoint failure: 500: Failure to query Gemini model
+2025-05-12 18:12:18,655 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 18:12:18,656 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

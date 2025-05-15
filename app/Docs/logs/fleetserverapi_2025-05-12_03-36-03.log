@@ -1,0 +1,19 @@
+2025-05-12 03:36:03,741 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 03:36:03,742 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 03:36:03,742 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 03:36:03,743 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 03:36:03,745 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 03:36:03,746 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 03:36:03,750 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 03:36:03,751 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 03:36:05,026 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 03:36:08,288 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 03:36:08,288 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 03:36:08,289 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 03:36:08,292 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 03:36:08,295 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 03:36:08,296 - fleetserverapi - INFO - Startup Complete
+2025-05-12 03:36:26,289 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 03:36:26,289 - fleetserverapi - WARNING - Main endpoint failure: sequence item 0: expected str instance, BasePromptRequestItem found
+2025-05-12 03:40:30,879 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 03:40:30,880 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

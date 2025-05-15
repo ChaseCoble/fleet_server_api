@@ -1,0 +1,24 @@
+2025-05-13 00:09:11,923 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-13 00:09:11,924 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-13 00:09:11,924 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-13 00:09:11,925 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-13 00:09:11,927 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-13 00:09:11,927 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-13 00:09:11,930 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-13 00:09:11,930 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-13 00:09:13,961 - fleetserverapi - INFO - Short embedding model created
+2025-05-13 00:09:17,611 - fleetserverapi - INFO - Long embedding model created
+2025-05-13 00:09:17,612 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-13 00:09:17,614 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-13 00:09:17,621 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-13 00:09:17,625 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-13 00:09:17,629 - fleetserverapi - INFO - Startup Complete
+2025-05-13 00:11:53,103 - fleetserverapi - INFO - Post endpoint hit
+2025-05-13 00:11:53,104 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-13 00:11:53,105 - fleetserverapi - INFO - Begins summarizing
+2025-05-13 00:13:52,377 - fleetserverapi - INFO - Completes Summarizationn
+2025-05-13 00:14:20,223 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-13 00:14:55,684 - fleetserverapi - INFO - GenAI client obtained from session_globals
+2025-05-13 00:14:57,324 - fleetserverapi - WARNING - Main endpoint failure: 500: Failed to create GENAI cache: 'CachedContent' object has no attribute 'result'
+2025-05-13 00:15:55,583 - fleetserverapi - INFO - Shutting down application.
+2025-05-13 00:15:55,583 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

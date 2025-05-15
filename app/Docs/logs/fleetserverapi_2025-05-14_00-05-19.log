@@ -1,0 +1,32 @@
+2025-05-14 00:05:20,181 - fleetserverapi - INFO - LANCEDB_URI is databases/lance
+2025-05-14 00:05:20,182 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-14 00:05:20,182 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-14 00:05:20,182 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-14 00:05:20,184 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-14 00:05:20,184 - fleetserverapi - INFO - Sqlite database uri is databases/sqlite/text_content_reference.db
+2025-05-14 00:05:20,187 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-14 00:05:20,221 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-14 00:05:21,772 - fleetserverapi - INFO - Short embedding model created
+2025-05-14 00:05:25,603 - fleetserverapi - INFO - Long embedding model created
+2025-05-14 00:05:25,604 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-14 00:05:25,605 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-14 00:05:25,608 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-14 00:05:25,611 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-14 00:05:25,613 - fleetserverapi - INFO - Startup Complete
+2025-05-14 00:05:42,628 - fleetserverapi - INFO - Post endpoint hit
+2025-05-14 00:05:42,629 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-14 00:05:42,630 - fleetserverapi - INFO - Begins summarizing
+2025-05-14 00:05:59,702 - fleetserverapi - INFO - Completes Summarizationn
+2025-05-14 00:06:29,415 - fleetserverapi - INFO - Cache hit for request 'Please provide me with the text you would like me ...' with distance 2.4572
+2025-05-14 00:06:29,420 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-14 00:06:34,627 - fleetserverapi - INFO - GenAI client obtained from session_globals
+2025-05-14 00:06:35,886 - fleetserverapi - INFO - Context cache created: cachedContents/hi16bp47qb76aw16ft6r05oaxfckkprkky5z6n4k
+2025-05-14 00:06:46,799 - fleetserverapi - INFO - Prompt task for ID fc611a90-9703-4bd2-b7b4-aaf1f1402d97 completed successfully.
+2025-05-14 00:06:46,800 - fleetserverapi - INFO - Prompt task for ID dd4488f5-db3a-4d53-ab16-7148be665947 completed successfully.
+2025-05-14 00:06:46,800 - fleetserverapi - INFO - Prompt task for ID 8b75e726-dca6-4cad-a376-98c0ff5daa67 completed successfully.
+2025-05-14 00:06:46,800 - fleetserverapi - INFO - Prompt task for ID ae54959f-cca6-4d65-bb46-47919552ffea completed successfully.
+2025-05-14 00:06:46,801 - fleetserverapi - INFO - Prompt task for ID 3b4aa74f-ee53-4f9a-9a47-c5ed8eb72b43 completed successfully.
+2025-05-14 00:06:46,801 - fleetserverapi - INFO - Prompt iteration finished: All 5 prompts processed successfully.
+2025-05-14 00:06:46,801 - fleetserverapi - INFO - Prompt iteration completed
+2025-05-14 00:06:46,801 - fleetserverapi - INFO - Attempting to delete GENAI cache 'cachedContents/hi16bp47qb76aw16ft6r05oaxfckkprkky5z6n4k'
+2025-05-14 00:06:47,254 - fleetserverapi - WARNING - Main endpoint failure: storage_manager() got an unexpected keyword argument 'task_id'

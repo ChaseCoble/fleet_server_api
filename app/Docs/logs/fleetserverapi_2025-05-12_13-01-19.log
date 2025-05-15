@@ -1,0 +1,39 @@
+2025-05-12 13:01:19,845 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 13:01:19,845 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 13:01:19,846 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 13:01:19,846 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 13:01:19,848 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 13:01:19,849 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 13:01:19,852 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 13:01:19,854 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 13:01:21,837 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 13:01:25,467 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 13:01:25,468 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 13:01:25,468 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 13:01:25,475 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 13:01:25,477 - fleetserverapi - WARNING - Existing content_vector_data Table does not match lancedb schema
+2025-05-12 13:01:25,481 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 13:01:25,482 - fleetserverapi - WARNING - Existing Table does not match lancedb schema
+2025-05-12 13:01:25,483 - fleetserverapi - WARNING - Existing content_vector_data Table schema mismatch.
+2025-05-12 13:01:25,483 - fleetserverapi - WARNING -   Current Schema: id: string
+vector_short: list<item: double> not null
+  child 0, item: double
+vector_long: list<item: double> not null
+  child 0, item: double
+doc_id: string
+2025-05-12 13:01:25,484 - fleetserverapi - WARNING -   Expected Schema: id: string
+vector_short: fixed_size_list<item: float>[384]
+  child 0, item: float
+vector_long: fixed_size_list<item: float>[768]
+  child 0, item: float
+doc_id: string
+2025-05-12 13:01:25,485 - fleetserverapi - WARNING - Existing context_vector_data Table schema mismatch.
+2025-05-12 13:01:25,485 - fleetserverapi - WARNING -   Current Schema: document_id: string not null
+vector: list<item: double> not null
+  child 0, item: double
+2025-05-12 13:01:25,486 - fleetserverapi - WARNING -   Expected Schema: document_id: string
+vector: fixed_size_list<item: float>[768]
+  child 0, item: float
+2025-05-12 13:01:25,487 - fleetserverapi - INFO - Startup Complete
+2025-05-12 13:02:56,104 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 13:02:56,106 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

@@ -1,0 +1,2 @@
+2025-05-11 23:56:13,872 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-11 23:56:13,872 - fleetserverapi - ERROR - LANCEDB_URI not found

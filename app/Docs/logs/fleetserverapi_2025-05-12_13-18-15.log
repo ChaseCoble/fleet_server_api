@@ -1,0 +1,20 @@
+2025-05-12 13:18:15,113 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 13:18:15,113 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 13:18:15,114 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 13:18:15,114 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 13:18:15,116 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 13:18:15,116 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 13:18:15,119 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 13:18:15,120 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 13:18:16,769 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 13:18:20,282 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 13:18:20,282 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 13:18:20,282 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 13:18:20,286 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 13:18:20,289 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 13:18:20,291 - fleetserverapi - INFO - Startup Complete
+2025-05-12 13:18:31,645 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 13:18:31,646 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 13:19:04,396 - fleetserverapi - WARNING - Main endpoint failure: cannot access local variable 'logger' where it is not associated with a value
+2025-05-12 13:21:08,429 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 13:21:08,430 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

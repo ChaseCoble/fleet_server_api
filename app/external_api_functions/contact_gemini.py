@@ -1,73 +1,110 @@
-from google import genai
-from google.genai import types
-import os
-from typing import Union, List, Optional
-from uuid import uuid4
-from external_api_helpers import cache_sys_inst_str_proc
-from models.base import BaseGeminiResponseModel, QueryResponseModel
-
-"""
-Models that can context-cache: Gemma 3(Unlimited), 2.0 Flash(1,000,000 tokens per hour),
-Models that can ground: 2.0 Flash(500 RPD), Gemini 2.5 Pro Preview(can think as well)
-MVP does not ground.
-
-presence_penalty: gemini-2.0-flash-001 only
-
-"""
+# import os
+# import asyncio
+# from typing import List
+# from uuid import uuid4
+# from google import genai
+# from google.genai import types
+# from fastapi import HTTPException
+# from app.models.base import BasePromptResponseDBItemModel
 
 
-def query_genai(
-    query_context: Union[str, List[str]], 
-    content: Union[List[QueryResponseModel]], 
-    session_globals, 
-    agent_instruction=None, 
-    optional_instruction=None, 
-    iter_is_after:Optional[bool] = None
-    ):
-    """
-        Precondition:
-            query_context: Singular or list of statements to cache as context,
-            content: Singular or list of partially filled QueryResponseModel objects,
-            session_globals: global state object containing logger and other app wide constants,
-            agent_instruction: Agent specific instruction for either addition to context, or each prompt
-            optional_instruction: Additional instructions for context only
-            iter_is_after: boolean to indicate that the agent instruction is after the prompt, None indicates that the agent_instruction is not iterative and goes to context
+# class GeminiCacheManager:
+#     def __init__(self, client):
+#         self.client = client
+#         self.cache = None
 
-        Postcondition:
-            The list of QueryResponseModel objects from content are completed with their responses
-    """
-    try:
-        API_KEY = os.getenv("API_KEY")
-        GOOGLE_MODEL = os.getenv("GOOGLE_MODEL")
-        query_context = query_context
-        client = genai.Client(
-            api_key=API_KEY,
-            http_options=types.HttpOptions(api_version='v1alpha')
-        )
-        
-        system_instructions = cache_sys_inst_str_proc([(agent_instruction if iter_is_after is not None else None) , optional_instruction])
-        #joined_context = seperator.join(context) if (isinstance(context, list)) else context
-        cache = client.caches.create(
-            model = GOOGLE_MODEL,
-            config=types.CreateCachedContentConfig(
-                system_instruction=(
-                    system_instructions
-                ),
-                contents=[query_context] if isinstance(query_context, list) else query_context,
-                ttl = "1000s"
-            )
-        )
-        cache_name = cache.name
-        session_globals.logger.info(f"Cache {cache_name} created: {client.caches.get(name = cache_name)}")
-        config_generation = types.GenerateContentConfig(
-            cached_content = cache_name,
-            temperature = session_globals.TEMPERATURE,
-            presencePenalty = session_globals.PRESENCE_PENALTY
-            topP = session_globals.TOPP,
-            frequencyPenalty = session_globals.FREQUENCY_PENALTY,    
-            response_mime_type = "application/json",
-            response_schema = BaseGeminiResponseModel
-        )
-        session_globals.logger.info("Config object generated")
+#     async def create_context_cache(self, content: str, model: str, system_instruction: str = None, ttl_seconds: int = 3600):
+#         formatted_content = [
+#             types.Content(
+#                 parts=[
+#                     types.Part(text=content)
+#                 ],
+#                 role="user"
+#             )
+#         ] 
+#         config = types.CreateCachedContentConfig(
+#             display_name=f"context-cache-{uuid4()}",
+#             system_instruction=system_instruction or "You are a helpful assistant.",
+#             contents=formatted_content,
+#             ttl=f"{ttl_seconds}s"
+#         )
+#         # The SDK's cache creation is synchronous; run in thread for async compatibility
+#         cache = await asyncio.to_thread(
+#             self.client.caches.create,
+#             model=model,
+#             config=config
+#         )
+#         self.cache = cache
+#         return cache.name
 
+#     async def delete_context_cache(self, cache_name: str):
+#         if cache_name:
+#             await asyncio.to_thread(self.client.caches.delete, name=cache_name)
 
+# async def query_genai(
+#     query_context: str,
+#     prompts: List["BasePromptResponseDBItemModel"],
+#     session_globals
+# ):
+#     """
+#     Precondition:
+#         query_context: List[String to cache as context.]
+#         prompts: List of prompt objects.
+#         session_globals: Global state (logger, config).
+#     Postcondition:
+#         Each prompt object is completed with its response.
+#     """
+#     GOOGLE_MODEL = os.getenv("GOOGLE_MODEL")  # e.g., "models/gemini-2.0-flash-001"
+#     temperature = getattr(session_globals, 'TEMPERATURE', None)
+#     presence_penalty = getattr(session_globals, 'PRESENCE_PENALTY', None)
+#     top_p = getattr(session_globals, 'TOPP', None)
+#     frequency_penalty = getattr(session_globals, 'FREQUENCY_PENALTY', None)
+#     cache_name = None
+
+#     client = session_globals.genai_client
+#     cache_service = GeminiCacheManager(client=client)
+#     session_globals.logger.info("GenAI client initialized")
+
+#     try:
+#         # Create the context cache (explicit caching, see [6][10])
+#         print(f"query context is : {query_context[:50]} and is type: {type(query_context)}")
+#         cache_name = await cache_service.create_context_cache(
+#             content=query_context,
+#             model=GOOGLE_MODEL,
+#             system_instruction="You are a helpful assistant.",
+#             ttl_seconds=3600
+#         )
+#         session_globals.logger.info(f"Context cache created: {cache_name}")
+
+#         # Prepare generation config
+#         config_generation = types.GenerateContentConfig(
+#             cached_content=cache_name,
+#             temperature=temperature,
+#             presence_penalty=presence_penalty,
+#             top_p=top_p,
+#             frequency_penalty=frequency_penalty,
+#             response_mime_type="application/json",
+#             # response_schema=BaseGeminiResponseModel  # Uncomment if supported/needed
+#         )
+#         from app.external_api_functions import prompt_iteration
+#         # Call your prompt iteration helper (pass client, not module)
+#         await prompt_iteration(
+#             client=client,
+#             session_globals=session_globals,
+#             prompt_object_list=prompts,
+#             config=config_generation,
+#             model=GOOGLE_MODEL
+#         )
+#     except HTTPException:
+#         raise
+#     except Exception as e:
+#         session_globals.logger.error(f"Failure to query Gemini model: {e}")
+#         raise HTTPException(status_code=500, detail="Failure to query Gemini model")
+#     finally:
+#         if cache_name:
+#             session_globals.logger.info(f"Attempting to delete GENAI cache '{cache_name}'")
+#             try:
+#                 await cache_service.delete_context_cache(cache_name)
+#                 session_globals.logger.info(f"GENAI Cache '{cache_name}' deleted successfully.")
+#             except Exception as delete_error:
+#                 session_globals.logger.error(f"Error deleting GENAI cache '{cache_name}': {delete_error}")

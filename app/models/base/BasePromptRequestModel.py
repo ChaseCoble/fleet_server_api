@@ -1,8 +1,7 @@
 from pydantic import BaseModel, Field
 from typing import Optional, Union, List
 from datetime import datetime
-from uuid import UUID, uuid4
-from base import BasePromptRequestMetadataModel
+
 
 
 class SourceItemModel(BaseModel):
@@ -66,13 +65,6 @@ class BasePromptRequestModel(BaseModel):
         default = [],
         description="Content set for analysis"  
     )
-    source_url: Optional[List[SourceItemModel]] = Field(
-        default = None,
-        description = "URLs utilized by client api"
-    )
-    metadata: Optional[BasePromptRequestMetadataModel] = Field(
-        default_factory = BasePromptRequestMetadataModel,
-        description="Agent specific data"
-    )
+
     
 

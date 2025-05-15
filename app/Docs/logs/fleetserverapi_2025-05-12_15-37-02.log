@@ -1,0 +1,22 @@
+2025-05-12 15:37:02,720 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 15:37:02,720 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 15:37:02,721 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 15:37:02,721 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 15:37:02,723 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 15:37:02,723 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 15:37:02,727 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 15:37:02,729 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 15:37:04,449 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 15:37:07,825 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 15:37:07,827 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 15:37:07,828 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 15:37:07,839 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 15:37:07,848 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 15:37:07,853 - fleetserverapi - INFO - Startup Complete
+2025-05-12 15:37:25,350 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 15:37:25,351 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 15:37:57,800 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-12 15:38:02,089 - fleetserverapi - ERROR - error creating GENAI cache: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Cached content is required to have content.role set.', 'status': 'INVALID_ARGUMENT'}}
+2025-05-12 15:38:02,090 - fleetserverapi - WARNING - Main endpoint failure: cannot access local variable 'cache_name' where it is not associated with a value
+2025-05-12 15:41:27,920 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 15:41:27,921 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

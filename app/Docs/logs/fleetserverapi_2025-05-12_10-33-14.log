@@ -1,0 +1,20 @@
+2025-05-12 10:33:14,465 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 10:33:14,466 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 10:33:14,466 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 10:33:14,467 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 10:33:14,469 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 10:33:14,470 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 10:33:14,473 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 10:33:14,474 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 10:33:16,162 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 10:33:19,645 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 10:33:19,647 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 10:33:19,648 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 10:33:19,660 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 10:33:19,669 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 10:33:19,673 - fleetserverapi - INFO - Startup Complete
+2025-05-12 10:33:28,339 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 10:33:28,340 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 10:34:00,648 - fleetserverapi - WARNING - Main endpoint failure: lance error: LanceError(Index): Data type is not a vector (FixedSizeListArray or List<FixedSizeListArray>), but Float64, C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\lance-0.26.0\src\index\vector\utils.rs:101:23
+2025-05-12 10:34:35,710 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 10:34:35,711 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

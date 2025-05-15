@@ -1,0 +1,8 @@
+2025-05-12 00:22:28,530 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 00:22:28,549 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 00:22:28,550 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 00:22:28,557 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: None and None
+2025-05-12 00:22:28,558 - fleetserverapi - INFO - Creating or opening table: {CONTENT_TABLE_NAME}
+2025-05-12 00:22:28,560 - fleetserverapi - ERROR - Error setting up database table: argument of type 'coroutine' is not iterable
+2025-05-12 00:22:28,561 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 00:22:28,562 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

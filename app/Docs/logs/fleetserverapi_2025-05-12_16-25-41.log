@@ -1,0 +1,19 @@
+2025-05-12 16:25:41,659 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 16:25:41,659 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 16:25:41,660 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 16:25:41,660 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 16:25:41,662 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 16:25:41,662 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 16:25:41,665 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 16:25:41,667 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 16:25:43,245 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 16:25:46,632 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 16:25:46,633 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 16:25:46,633 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 16:25:46,637 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 16:25:46,641 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 16:25:46,644 - fleetserverapi - INFO - Startup Complete
+2025-05-12 16:27:38,181 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 16:27:38,181 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 16:28:10,474 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-12 16:28:12,306 - fleetserverapi - WARNING - Main endpoint failure: 500: Failure to query gemini model

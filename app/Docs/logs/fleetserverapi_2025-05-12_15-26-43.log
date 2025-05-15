@@ -1,0 +1,22 @@
+2025-05-12 15:26:43,180 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 15:26:43,181 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 15:26:43,182 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 15:26:43,183 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 15:26:43,186 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 15:26:43,187 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 15:26:43,190 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 15:26:43,191 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 15:26:44,714 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 15:26:48,306 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 15:26:48,306 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 15:26:48,307 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 15:26:48,311 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 15:26:48,315 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 15:26:48,317 - fleetserverapi - INFO - Startup Complete
+2025-05-12 15:31:05,705 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 15:31:05,706 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 15:31:38,886 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-12 15:31:40,766 - fleetserverapi - ERROR - error creating GENAI cache: BaseEventLoop.run_in_executor() got an unexpected keyword argument 'model'
+2025-05-12 15:31:40,767 - fleetserverapi - WARNING - Main endpoint failure: cannot access local variable 'cache_name' where it is not associated with a value
+2025-05-12 15:36:38,436 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 15:36:38,436 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

@@ -1,0 +1,20 @@
+2025-05-12 16:05:56,585 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 16:05:56,586 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 16:05:56,586 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 16:05:56,587 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 16:05:56,589 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 16:05:56,590 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 16:05:56,593 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 16:05:56,594 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 16:05:58,174 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 16:06:01,677 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 16:06:01,678 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 16:06:01,678 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 16:06:01,681 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 16:06:01,684 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 16:06:01,686 - fleetserverapi - INFO - Startup Complete
+2025-05-12 16:07:54,773 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 16:07:54,773 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 16:08:29,982 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-12 16:08:34,814 - fleetserverapi - ERROR - error creating GENAI cache: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'TotalCachedContentStorageTokensPerModelFreeTier limit exceeded for model gemini-2.0-flash: limit=0, requested=1503734', 'status': 'RESOURCE_EXHAUSTED'}}
+2025-05-12 16:08:34,815 - fleetserverapi - WARNING - Main endpoint failure: 500: Failed to create GENAI cache

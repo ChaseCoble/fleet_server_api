@@ -1,0 +1,20 @@
+2025-05-12 04:27:01,722 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 04:27:01,722 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 04:27:01,723 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 04:27:01,723 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 04:27:01,726 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 04:27:01,726 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 04:27:01,730 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 04:27:01,731 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 04:27:03,000 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 04:27:06,398 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 04:27:06,399 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 04:27:06,400 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 04:27:06,407 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 04:27:06,413 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 04:27:06,415 - fleetserverapi - INFO - Startup Complete
+2025-05-12 04:27:23,174 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 04:27:23,174 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 04:27:58,303 - fleetserverapi - WARNING - Main endpoint failure: 'coroutine' object has no attribute 'limit'
+2025-05-12 04:31:47,957 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 04:31:47,958 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

@@ -1,0 +1,51 @@
+2025-05-14 20:02:37,165 - fleetserverapi - INFO - LANCEDB_URI is databases/lance
+2025-05-14 20:02:37,166 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-14 20:02:37,166 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-14 20:02:37,167 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-14 20:02:37,169 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-14 20:02:37,170 - fleetserverapi - INFO - Sqlite database uri is databases/sqlite/text_content_reference.db
+2025-05-14 20:02:37,174 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-14 20:02:37,211 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-14 20:02:39,137 - fleetserverapi - INFO - Short embedding model created
+2025-05-14 20:02:43,508 - fleetserverapi - INFO - Long embedding model created
+2025-05-14 20:02:43,509 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-14 20:02:43,509 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-14 20:02:43,512 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-14 20:02:43,515 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-14 20:02:43,518 - fleetserverapi - INFO - Startup Complete
+2025-05-14 20:03:00,783 - fleetserverapi - INFO - Post endpoint hit
+2025-05-14 20:03:00,783 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-14 20:03:00,784 - fleetserverapi - INFO - Begins summarizing
+2025-05-14 20:03:28,372 - fleetserverapi - INFO - Completes Summarizationn
+2025-05-14 20:03:57,782 - fleetserverapi - INFO - Cache hit for request 'Please provide the text you would like me to summa...' with distance 11.8508
+2025-05-14 20:03:57,790 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-14 20:04:56,149 - fleetserverapi - INFO - GenAI client obtained from session_globals
+2025-05-14 20:04:57,043 - fleetserverapi - INFO - Context cache created: cachedContents/8y3dujf5ohebrrz94wyvveytsb7lk5h87nkdlip1
+2025-05-14 20:05:07,021 - fleetserverapi - INFO - Prompt task for ID 4fac3bc7-46da-4de3-ab24-61cb91ba28fd completed successfully.
+2025-05-14 20:05:07,022 - fleetserverapi - INFO - Prompt task for ID c6ae99f1-4b6c-4ce4-b873-275bb65f8af6 completed successfully.
+2025-05-14 20:05:07,023 - fleetserverapi - INFO - Prompt task for ID b860d73d-55bf-43eb-9dd4-fd0dc0597722 completed successfully.
+2025-05-14 20:05:07,023 - fleetserverapi - INFO - Prompt task for ID 7a79450c-dd1f-49fb-94de-921c4ee32836 completed successfully.
+2025-05-14 20:05:07,025 - fleetserverapi - INFO - Prompt task for ID 53bc6085-0d62-42fb-9a84-79b8fd13e1dc completed successfully.
+2025-05-14 20:05:07,025 - fleetserverapi - INFO - Prompt iteration finished: All 5 prompts processed successfully.
+2025-05-14 20:05:07,026 - fleetserverapi - INFO - Prompt iteration completed
+2025-05-14 20:05:07,027 - fleetserverapi - INFO - Attempting to delete GENAI cache 'cachedContents/8y3dujf5ohebrrz94wyvveytsb7lk5h87nkdlip1'
+2025-05-14 20:05:07,281 - fleetserverapi - ERROR - Lance storage error: object of type 'NoneType' has no len()
+2025-05-14 20:05:07,282 - fleetserverapi - INFO - Entered store in sqlite
+2025-05-14 20:05:07,284 - fleetserverapi - ERROR - Lance storage error: Column 1 named vector_short expected length 36 but got length 1
+2025-05-14 20:05:07,286 - fleetserverapi - INFO - Entered store in sqlite
+2025-05-14 20:05:07,288 - fleetserverapi - ERROR - Lance storage error: Column 1 named vector_short expected length 36 but got length 1
+2025-05-14 20:05:07,290 - fleetserverapi - INFO - Entered store in sqlite
+2025-05-14 20:05:07,293 - fleetserverapi - ERROR - Lance storage error: Column 1 named vector_short expected length 36 but got length 1
+2025-05-14 20:05:07,294 - fleetserverapi - INFO - Entered store in sqlite
+2025-05-14 20:05:07,297 - fleetserverapi - ERROR - Lance storage error: Column 1 named vector_short expected length 36 but got length 1
+2025-05-14 20:05:07,298 - fleetserverapi - INFO - Entered store in sqlite
+2025-05-14 20:05:07,318 - fleetserverapi - INFO - Object c6ae99f1-4b6c-4ce4-b873-275bb65f8af6 :: ab8ec875-a64e-4fd1-831f-761098232a6a stored in sqlite
+2025-05-14 20:05:07,319 - fleetserverapi - WARNING - Storage manager failed to empty request pile
+2025-05-14 20:05:07,329 - fleetserverapi - INFO - Object 53bc6085-0d62-42fb-9a84-79b8fd13e1dc :: ab8ec875-a64e-4fd1-831f-761098232a6a stored in sqlite
+2025-05-14 20:05:07,330 - fleetserverapi - WARNING - Storage manager failed to empty request pile
+2025-05-14 20:05:07,349 - fleetserverapi - INFO - Object 7a79450c-dd1f-49fb-94de-921c4ee32836 :: ab8ec875-a64e-4fd1-831f-761098232a6a stored in sqlite
+2025-05-14 20:05:07,349 - fleetserverapi - WARNING - Storage manager failed to empty request pile
+2025-05-14 20:05:07,359 - fleetserverapi - INFO - Object b860d73d-55bf-43eb-9dd4-fd0dc0597722 :: ab8ec875-a64e-4fd1-831f-761098232a6a stored in sqlite
+2025-05-14 20:05:07,360 - fleetserverapi - WARNING - Storage manager failed to empty request pile
+2025-05-14 20:05:07,375 - fleetserverapi - INFO - Object 4fac3bc7-46da-4de3-ab24-61cb91ba28fd :: ab8ec875-a64e-4fd1-831f-761098232a6a stored in sqlite
+2025-05-14 20:05:07,376 - fleetserverapi - WARNING - Storage manager failed to empty request pile

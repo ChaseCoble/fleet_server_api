@@ -1,0 +1,24 @@
+2025-05-12 21:38:53,573 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 21:38:53,573 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 21:38:53,573 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 21:38:53,574 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 21:38:53,576 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 21:38:53,576 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 21:38:53,578 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 21:38:53,581 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 21:38:55,269 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 21:38:58,745 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 21:38:58,746 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 21:38:58,746 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 21:38:58,750 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 21:38:58,752 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 21:38:58,755 - fleetserverapi - INFO - Startup Complete
+2025-05-12 21:43:57,045 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 21:43:57,414 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 21:43:57,414 - fleetserverapi - INFO - Begins summarizing
+2025-05-12 21:43:57,417 - fleetserverapi - WARNING - Main endpoint failure: 1 validation error for GenerateContentConfig
+max_output_tokens
+  Input should be a valid integer, got a number with a fractional part [type=int_from_float, input_value=1170.2857142857142, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.11/v/int_from_float
+2025-05-12 21:44:29,805 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 21:44:29,806 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

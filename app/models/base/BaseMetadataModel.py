@@ -16,7 +16,7 @@ class BasePromptRequestMetadataModel(BaseModel):
         description="Descriptive string for which model sent the prompt"
     )
     
-
+"""Not an implemented property"""
 class BaseDBItemMetadataModel(BasePromptRequestMetadataModel):
     id: str = Field(
         alias="client_id",

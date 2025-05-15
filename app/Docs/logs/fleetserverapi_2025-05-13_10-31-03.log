@@ -1,0 +1,23 @@
+2025-05-13 10:31:04,008 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-13 10:31:04,009 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-13 10:31:04,009 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-13 10:31:04,010 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-13 10:31:04,012 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-13 10:31:04,012 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-13 10:31:04,014 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-13 10:31:04,068 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-13 10:31:05,883 - fleetserverapi - INFO - Short embedding model created
+2025-05-13 10:31:09,286 - fleetserverapi - INFO - Long embedding model created
+2025-05-13 10:31:09,286 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-13 10:31:09,287 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-13 10:31:09,289 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-13 10:31:09,291 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-13 10:31:09,294 - fleetserverapi - INFO - Startup Complete
+2025-05-13 10:31:19,246 - fleetserverapi - INFO - Post endpoint hit
+2025-05-13 10:31:19,247 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-13 10:31:19,247 - fleetserverapi - INFO - Begins summarizing
+2025-05-13 10:32:18,912 - fleetserverapi - INFO - Completes Summarizationn
+2025-05-13 10:32:48,120 - fleetserverapi - INFO - Cache hit for request 'Please provide the text you would like me to summa...' with distance 7.7271
+2025-05-13 10:32:48,121 - fleetserverapi - WARNING - Main endpoint failure: threads can only be started once
+2025-05-13 10:38:22,960 - fleetserverapi - INFO - Shutting down application.
+2025-05-13 10:38:22,961 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

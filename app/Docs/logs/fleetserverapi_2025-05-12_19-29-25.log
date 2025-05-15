@@ -1,0 +1,23 @@
+2025-05-12 19:29:25,907 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 19:29:25,908 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 19:29:25,908 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 19:29:25,909 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 19:29:25,910 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 19:29:25,911 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 19:29:25,914 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 19:29:25,916 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 19:29:27,403 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 19:29:30,739 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 19:29:30,740 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 19:29:30,740 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 19:29:30,745 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 19:29:30,748 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 19:29:30,750 - fleetserverapi - INFO - Startup Complete
+2025-05-12 19:30:07,268 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 19:30:07,269 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 19:30:11,665 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-12 19:30:13,727 - fleetserverapi - INFO - GenAI client initialized
+2025-05-12 19:30:14,228 - fleetserverapi - ERROR - Failure to query Gemini model: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Cached content is too small. total_token_count=610, min_total_token_count=32768', 'status': 'INVALID_ARGUMENT'}}
+2025-05-12 19:30:14,229 - fleetserverapi - WARNING - Main endpoint failure: 500: Failure to query Gemini model
+2025-05-12 19:30:55,826 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 19:30:55,827 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

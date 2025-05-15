@@ -1,0 +1,25 @@
+2025-05-12 21:09:45,062 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 21:09:45,062 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 21:09:45,063 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 21:09:45,063 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 21:09:45,065 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 21:09:45,065 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 21:09:45,068 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 21:09:45,071 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 21:09:46,637 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 21:09:50,354 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 21:09:50,354 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 21:09:50,355 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 21:09:50,360 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 21:09:50,365 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 21:09:50,369 - fleetserverapi - INFO - Startup Complete
+2025-05-12 21:10:08,296 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 21:10:08,629 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 21:10:08,630 - fleetserverapi - INFO - Begins summarizing
+2025-05-12 21:11:41,167 - fleetserverapi - INFO - Completes Summarizationn
+2025-05-12 21:11:51,304 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-12 21:11:58,373 - fleetserverapi - INFO - GenAI client initialized
+2025-05-12 21:11:58,851 - fleetserverapi - ERROR - Failure to query Gemini model: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Cached content is too small. total_token_count=3773, min_total_token_count=32768', 'status': 'INVALID_ARGUMENT'}}
+2025-05-12 21:11:58,853 - fleetserverapi - WARNING - Main endpoint failure: 500: Failure to query Gemini model
+2025-05-12 21:13:42,506 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 21:13:42,507 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

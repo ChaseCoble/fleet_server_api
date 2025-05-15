@@ -1,0 +1,23 @@
+2025-05-13 10:13:59,418 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-13 10:13:59,419 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-13 10:13:59,419 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-13 10:13:59,420 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-13 10:13:59,422 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-13 10:13:59,423 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-13 10:13:59,426 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-13 10:13:59,483 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-13 10:14:00,872 - fleetserverapi - INFO - Short embedding model created
+2025-05-13 10:14:04,207 - fleetserverapi - INFO - Long embedding model created
+2025-05-13 10:14:04,208 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-13 10:14:04,209 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-13 10:14:04,215 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-13 10:14:04,220 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-13 10:14:04,224 - fleetserverapi - INFO - Startup Complete
+2025-05-13 10:14:14,357 - fleetserverapi - INFO - Post endpoint hit
+2025-05-13 10:14:14,358 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-13 10:14:14,358 - fleetserverapi - INFO - Begins summarizing
+2025-05-13 10:14:44,711 - fleetserverapi - INFO - Completes Summarizationn
+2025-05-13 10:15:12,931 - fleetserverapi - INFO - Cache hit for request 'Please provide me with the text you would like me ...' with distance 6.3037
+2025-05-13 10:15:12,933 - fleetserverapi - WARNING - Main endpoint failure: 'NoneType' object is not subscriptable
+2025-05-13 10:17:49,452 - fleetserverapi - INFO - Shutting down application.
+2025-05-13 10:17:49,453 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

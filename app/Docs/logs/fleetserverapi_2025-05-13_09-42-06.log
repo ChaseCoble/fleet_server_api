@@ -1,0 +1,50 @@
+2025-05-13 09:42:06,726 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-13 09:42:06,726 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-13 09:42:06,726 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-13 09:42:06,727 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-13 09:42:06,729 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-13 09:42:06,729 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-13 09:42:06,731 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-13 09:42:06,775 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-13 09:42:08,436 - fleetserverapi - INFO - Short embedding model created
+2025-05-13 09:42:12,233 - fleetserverapi - INFO - Long embedding model created
+2025-05-13 09:42:12,234 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-13 09:42:12,234 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-13 09:42:12,240 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-13 09:42:12,243 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-13 09:42:12,245 - fleetserverapi - INFO - Startup Complete
+2025-05-13 09:42:20,205 - fleetserverapi - INFO - Post endpoint hit
+2025-05-13 09:42:20,205 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-13 09:42:20,206 - fleetserverapi - INFO - Begins summarizing
+2025-05-13 09:42:39,616 - fleetserverapi - INFO - Completes Summarizationn
+2025-05-13 09:43:07,872 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-13 09:43:12,437 - fleetserverapi - INFO - GenAI client obtained from session_globals
+2025-05-13 09:43:13,131 - fleetserverapi - WARNING - Main endpoint failure: 500: Failed to create GENAI cache: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Cached content is too small. total_token_count=32507, min_total_token_count=32768', 'status': 'INVALID_ARGUMENT'}}
+2025-05-13 09:50:48,171 - fleetserverapi - INFO - Post endpoint hit
+2025-05-13 09:50:48,171 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-13 09:50:48,172 - fleetserverapi - INFO - Begins summarizing
+2025-05-13 09:51:06,562 - fleetserverapi - INFO - Completes Summarizationn
+2025-05-13 09:51:35,042 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-13 09:51:39,727 - fleetserverapi - INFO - GenAI client obtained from session_globals
+2025-05-13 09:51:40,917 - fleetserverapi - INFO - Context cache created: cachedContents/3ymwuc45arxem3sdtjajoo6bfz8io1epx278x08f
+2025-05-13 09:51:40,918 - fleetserverapi - WARNING - Skipping prompt object with unexpected format at index 0: 6acef43a-6a3e-495d-a007-75f9a7f9725f
+2025-05-13 09:51:40,919 - fleetserverapi - WARNING - Skipping prompt object with unexpected format at index 1: ed1b338b-ee87-4f1d-ac50-bd72d31d3b45
+2025-05-13 09:51:40,919 - fleetserverapi - WARNING - Skipping prompt object with unexpected format at index 2: bcbdaa83-606d-404e-a521-0741d6565332
+2025-05-13 09:51:40,920 - fleetserverapi - WARNING - Skipping prompt object with unexpected format at index 3: a64492c2-ecfa-4782-bf3f-77d1c4f6414d
+2025-05-13 09:51:40,921 - fleetserverapi - WARNING - Skipping prompt object with unexpected format at index 4: 6284fa59-04d7-427e-b8bb-3d19727ad347
+2025-05-13 09:51:40,921 - fleetserverapi - INFO - Prompt iteration finished: All 0 prompts processed successfully.
+2025-05-13 09:51:40,922 - fleetserverapi - INFO - Prompt iteration completed
+2025-05-13 09:51:40,922 - fleetserverapi - INFO - Attempting to delete GENAI cache 'cachedContents/3ymwuc45arxem3sdtjajoo6bfz8io1epx278x08f'
+2025-05-13 09:51:41,192 - fleetserverapi - INFO - Stored vector:
+2025-05-13 09:51:41,193 - fleetserverapi - INFO - Entered store in sqlite
+2025-05-13 09:51:41,222 - fleetserverapi - INFO - Object CONTEXT :: a35a49af-11cc-4d83-9264-3ec5804de262 stored in sqlite
+2025-05-13 09:51:41,224 - fleetserverapi - WARNING - Main endpoint failure: storage_manager() missing 1 required positional argument: 'storage_object'
+2025-05-13 09:53:57,994 - fleetserverapi - INFO - Post endpoint hit
+2025-05-13 09:53:57,995 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-13 09:53:57,995 - fleetserverapi - INFO - Begins summarizing
+2025-05-13 09:54:13,679 - fleetserverapi - INFO - Completes Summarizationn
+2025-05-13 09:54:41,620 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-13 09:54:47,718 - fleetserverapi - INFO - GenAI client obtained from session_globals
+2025-05-13 09:54:48,340 - fleetserverapi - WARNING - Main endpoint failure: 500: Failed to create GENAI cache: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Cached content is too small. total_token_count=31872, min_total_token_count=32768', 'status': 'INVALID_ARGUMENT'}}
+2025-05-13 09:56:13,975 - fleetserverapi - INFO - Shutting down application.
+2025-05-13 09:56:13,976 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

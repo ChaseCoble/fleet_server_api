@@ -1,0 +1,10 @@
+2025-05-12 00:25:48,168 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 00:25:48,175 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 00:25:48,176 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 00:25:48,183 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: None and None
+2025-05-12 00:25:48,183 - fleetserverapi - INFO - Creating or opening table: {CONTENT_TABLE_NAME}
+2025-05-12 00:25:48,186 - fleetserverapi - INFO - Table content_vector_data created.
+2025-05-12 00:25:48,187 - fleetserverapi - INFO - Table context_vector_data created.
+2025-05-12 00:25:48,188 - fleetserverapi - INFO - Startup Complete
+2025-05-12 00:26:53,483 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 00:26:53,483 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

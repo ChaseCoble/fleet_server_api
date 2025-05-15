@@ -1,0 +1,33 @@
+2025-05-12 23:24:25,430 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 23:24:25,431 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 23:24:25,431 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 23:24:25,432 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 23:24:25,434 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 23:24:25,434 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 23:24:25,437 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 23:24:25,437 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 23:24:27,305 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 23:24:30,642 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 23:24:30,643 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 23:24:30,645 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 23:24:30,655 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 23:24:30,665 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 23:24:30,673 - fleetserverapi - INFO - Startup Complete
+2025-05-12 23:25:22,498 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 23:25:22,498 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 23:25:22,499 - fleetserverapi - INFO - Begins summarizing
+2025-05-12 23:27:18,634 - fleetserverapi - INFO - Completes Summarizationn
+2025-05-12 23:27:49,710 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-12 23:28:25,441 - fleetserverapi - INFO - GenAI client initialized
+2025-05-12 23:28:27,804 - fleetserverapi - INFO - Context cache created: cachedContents/v5xg0n0xefodj8b45cweoz70z246ietz50s4mcfi
+2025-05-12 23:28:28,679 - fleetserverapi - INFO - Request N/A failed. Error during API call: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': "* GenerateContentRequest.contents[0].parts[0].data: required oneof field 'data' must have one initialized field\n", 'status': 'INVALID_ARGUMENT'}}
+2025-05-12 23:28:28,685 - fleetserverapi - INFO - Request N/A failed. Error during API call: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': "* GenerateContentRequest.contents[0].parts[0].data: required oneof field 'data' must have one initialized field\n", 'status': 'INVALID_ARGUMENT'}}
+2025-05-12 23:28:28,694 - fleetserverapi - INFO - Request N/A failed. Error during API call: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': "* GenerateContentRequest.contents[0].parts[0].data: required oneof field 'data' must have one initialized field\n", 'status': 'INVALID_ARGUMENT'}}
+2025-05-12 23:28:28,697 - fleetserverapi - INFO - Request N/A failed. Error during API call: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': "* GenerateContentRequest.contents[0].parts[0].data: required oneof field 'data' must have one initialized field\n", 'status': 'INVALID_ARGUMENT'}}
+2025-05-12 23:28:28,705 - fleetserverapi - INFO - Request N/A failed. Error during API call: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': "* GenerateContentRequest.contents[0].parts[0].data: required oneof field 'data' must have one initialized field\n", 'status': 'INVALID_ARGUMENT'}}
+2025-05-12 23:28:28,707 - fleetserverapi - ERROR - Failure to query Gemini model: too many values to unpack (expected 2)
+2025-05-12 23:28:28,709 - fleetserverapi - INFO - Attempting to delete GENAI cache 'cachedContents/v5xg0n0xefodj8b45cweoz70z246ietz50s4mcfi'
+2025-05-12 23:28:29,442 - fleetserverapi - INFO - GENAI Cache 'cachedContents/v5xg0n0xefodj8b45cweoz70z246ietz50s4mcfi' deleted successfully.
+2025-05-12 23:28:29,443 - fleetserverapi - WARNING - Main endpoint failure: 500: Failure to query Gemini model
+2025-05-12 23:30:27,911 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 23:30:27,912 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

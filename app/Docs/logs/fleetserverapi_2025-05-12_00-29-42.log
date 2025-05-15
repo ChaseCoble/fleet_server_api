@@ -1,0 +1,4 @@
+2025-05-12 00:29:42,163 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 00:29:42,169 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 00:29:42,169 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 00:29:42,177 - fleetserverapi - INFO - Error loading embedding model: object NoneType can't be used in 'await' expression

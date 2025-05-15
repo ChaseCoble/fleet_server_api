@@ -1,0 +1,8 @@
+2025-05-12 00:39:56,362 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 00:39:56,363 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 00:39:56,363 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 00:39:56,366 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 00:39:56,369 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 00:39:56,370 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 00:40:05,348 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 00:40:07,226 - fleetserverapi - INFO - Error loading embedding model: This modeling file requires the following packages that were not found in your environment: einops. Run `pip install einops`

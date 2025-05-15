@@ -1,0 +1,20 @@
+2025-05-12 13:07:30,173 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 13:07:30,173 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 13:07:30,173 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 13:07:30,174 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 13:07:30,175 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 13:07:30,176 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 13:07:30,178 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 13:07:30,179 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 13:07:31,466 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 13:07:34,870 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 13:07:34,871 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 13:07:34,872 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 13:07:34,878 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 13:07:34,882 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 13:07:34,885 - fleetserverapi - INFO - Startup Complete
+2025-05-12 13:07:44,502 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 13:07:44,502 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 13:08:17,237 - fleetserverapi - WARNING - Main endpoint failure: lance error: Invalid user input: Column _distance does not exist, C:\Users\runneradmin\.cargo\registry\src\index.crates.io-6f17d22bba15001f\lance-core-0.26.0\src\datatypes\schema.rs:857:27
+2025-05-12 13:08:44,315 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 13:08:44,315 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

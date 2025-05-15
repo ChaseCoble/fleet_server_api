@@ -1,0 +1,22 @@
+2025-05-12 14:28:28,753 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 14:28:28,753 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 14:28:28,754 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 14:28:28,754 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 14:28:28,756 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 14:28:28,757 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 14:28:28,760 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 14:28:28,761 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 14:28:30,172 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 14:28:33,582 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 14:28:33,583 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 14:28:33,583 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 14:28:33,587 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 14:28:33,591 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 14:28:33,594 - fleetserverapi - INFO - Startup Complete
+2025-05-12 14:28:52,762 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 14:28:52,763 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 14:29:25,442 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-12 14:29:26,682 - fleetserverapi - ERROR - Error populating response model: 'module' object is not callable
+2025-05-12 14:29:26,682 - fleetserverapi - WARNING - Main endpoint failure: 500: Error populating response model
+2025-05-12 14:30:46,879 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 14:30:46,879 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

@@ -1,0 +1,22 @@
+2025-05-12 13:39:23,172 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 13:39:23,173 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 13:39:23,173 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 13:39:23,174 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 13:39:23,176 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 13:39:23,176 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 13:39:23,179 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 13:39:23,181 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 13:39:24,838 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 13:39:28,119 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 13:39:28,119 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 13:39:28,120 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 13:39:28,124 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 13:39:28,127 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 13:39:28,129 - fleetserverapi - INFO - Startup Complete
+2025-05-12 13:39:38,755 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 13:39:38,755 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 13:40:12,563 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-12 13:40:12,564 - fleetserverapi - ERROR - Error populating response model: Prompt name 'True' not found in the configured prompts dictionary with keys [].
+2025-05-12 13:40:12,564 - fleetserverapi - WARNING - Main endpoint failure: 500: Error populating response model
+2025-05-12 13:42:28,586 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 13:42:28,587 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

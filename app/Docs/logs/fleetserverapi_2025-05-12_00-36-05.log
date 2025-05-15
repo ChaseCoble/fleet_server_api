@@ -1,0 +1,12 @@
+2025-05-12 00:36:05,073 - fleetserverapi - INFO - Short embedding model name is None
+2025-05-12 00:36:05,073 - fleetserverapi - INFO - Long embedding model name is None
+2025-05-12 00:36:05,075 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 00:36:05,079 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 00:36:05,079 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 00:36:05,083 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 00:36:05,086 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 00:36:05,088 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: None and None
+2025-05-12 00:36:05,088 - fleetserverapi - INFO - Creating or opening table: {CONTENT_TABLE_NAME}
+2025-05-12 00:36:05,091 - fleetserverapi - ERROR - Error setting up database table: __args__
+2025-05-12 00:36:05,091 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 00:36:05,092 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

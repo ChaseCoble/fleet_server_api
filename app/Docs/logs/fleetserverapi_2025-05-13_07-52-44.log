@@ -1,0 +1,25 @@
+2025-05-13 07:52:44,680 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-13 07:52:44,680 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-13 07:52:44,680 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-13 07:52:44,681 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-13 07:52:44,682 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-13 07:52:44,683 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-13 07:52:44,685 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-13 07:52:44,686 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-13 07:52:46,219 - fleetserverapi - INFO - Short embedding model created
+2025-05-13 07:52:49,661 - fleetserverapi - INFO - Long embedding model created
+2025-05-13 07:52:49,661 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-13 07:52:49,662 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-13 07:52:49,666 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-13 07:52:49,670 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-13 07:52:49,672 - fleetserverapi - INFO - Startup Complete
+2025-05-13 07:53:46,229 - fleetserverapi - INFO - Post endpoint hit
+2025-05-13 07:53:46,230 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-13 07:53:46,230 - fleetserverapi - INFO - Begins summarizing
+2025-05-13 07:53:48,996 - fleetserverapi - WARNING - Main endpoint failure: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The service is currently unavailable.', 'status': 'UNAVAILABLE'}}
+2025-05-13 07:53:57,404 - fleetserverapi - INFO - Post endpoint hit
+2025-05-13 07:53:57,405 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-13 07:53:57,406 - fleetserverapi - INFO - Begins summarizing
+2025-05-13 07:54:16,212 - fleetserverapi - WARNING - Main endpoint failure: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'The service is currently unavailable.', 'status': 'UNAVAILABLE'}}
+2025-05-13 07:59:27,161 - fleetserverapi - INFO - Shutting down application.
+2025-05-13 07:59:27,162 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

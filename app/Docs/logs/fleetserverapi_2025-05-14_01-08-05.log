@@ -1,0 +1,23 @@
+2025-05-14 01:08:06,020 - fleetserverapi - INFO - LANCEDB_URI is databases/lance
+2025-05-14 01:08:06,021 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-14 01:08:06,021 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-14 01:08:06,021 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-14 01:08:06,023 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-14 01:08:06,023 - fleetserverapi - INFO - Sqlite database uri is databases/sqlite/text_content_reference.db
+2025-05-14 01:08:06,027 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-14 01:08:06,054 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-14 01:08:07,528 - fleetserverapi - INFO - Short embedding model created
+2025-05-14 01:08:11,509 - fleetserverapi - INFO - Long embedding model created
+2025-05-14 01:08:11,510 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-14 01:08:11,511 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-14 01:08:11,518 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-14 01:08:11,526 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-14 01:08:11,533 - fleetserverapi - INFO - Startup Complete
+2025-05-14 01:08:50,816 - fleetserverapi - INFO - Post endpoint hit
+2025-05-14 01:08:50,816 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-14 01:08:50,817 - fleetserverapi - INFO - Begins summarizing
+2025-05-14 01:09:46,699 - fleetserverapi - WARNING - Main endpoint failure: 503: Service unavailable
+2025-05-14 01:10:13,310 - fleetserverapi - INFO - Post endpoint hit
+2025-05-14 01:10:13,312 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-14 01:10:13,315 - fleetserverapi - INFO - Begins summarizing
+2025-05-14 01:11:22,177 - fleetserverapi - WARNING - Main endpoint failure: 503: Service unavailable

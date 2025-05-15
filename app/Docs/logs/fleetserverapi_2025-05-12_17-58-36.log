@@ -1,0 +1,21 @@
+2025-05-12 17:58:36,443 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 17:58:36,444 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 17:58:36,445 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 17:58:36,445 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 17:58:36,447 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 17:58:36,448 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 17:58:36,450 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 17:58:36,451 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 17:58:37,996 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 17:58:41,441 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 17:58:41,442 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 17:58:41,443 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 17:58:41,447 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 17:58:41,450 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 17:58:41,453 - fleetserverapi - INFO - Startup Complete
+2025-05-12 17:59:18,965 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 17:59:18,966 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 17:59:54,644 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-12 17:59:56,514 - fleetserverapi - INFO - GenAI client initialized
+2025-05-12 18:00:00,618 - fleetserverapi - ERROR - Failure to query Gemini model: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'TotalCachedContentStorageTokensPerModelFreeTier limit exceeded for model gemini-2.0-flash: limit=0, requested=1503741', 'status': 'RESOURCE_EXHAUSTED'}}
+2025-05-12 18:00:00,619 - fleetserverapi - WARNING - Main endpoint failure: 500: Failure to query Gemini model

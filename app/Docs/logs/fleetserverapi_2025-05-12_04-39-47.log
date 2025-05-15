@@ -1,0 +1,18 @@
+2025-05-12 04:39:47,019 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 04:39:47,020 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 04:39:47,020 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 04:39:47,021 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 04:39:47,023 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 04:39:47,024 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 04:39:47,027 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 04:39:47,028 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 04:39:48,303 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 04:39:51,601 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 04:39:51,602 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 04:39:51,603 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 04:39:51,614 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 04:39:51,625 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 04:39:51,628 - fleetserverapi - INFO - Startup Complete
+2025-05-12 04:40:08,706 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 04:40:08,706 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 04:40:40,928 - fleetserverapi - WARNING - Main endpoint failure: 'coroutine' object has no attribute 'empty'

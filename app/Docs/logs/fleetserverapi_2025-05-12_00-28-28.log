@@ -1,0 +1,4 @@
+2025-05-12 00:28:28,800 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 00:28:28,804 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 00:28:28,805 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 00:28:28,808 - fleetserverapi - INFO - Error loading embedding model: object SentenceTransformer can't be used in 'await' expression

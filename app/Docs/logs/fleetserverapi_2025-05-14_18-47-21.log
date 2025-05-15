@@ -1,0 +1,44 @@
+2025-05-14 18:47:21,918 - fleetserverapi - INFO - LANCEDB_URI is databases/lance
+2025-05-14 18:47:21,919 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-14 18:47:21,919 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-14 18:47:21,920 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-14 18:47:21,922 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-14 18:47:21,922 - fleetserverapi - INFO - Sqlite database uri is databases/sqlite/text_content_reference.db
+2025-05-14 18:47:21,927 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-14 18:47:21,963 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-14 18:47:23,549 - fleetserverapi - INFO - Short embedding model created
+2025-05-14 18:47:27,277 - fleetserverapi - INFO - Long embedding model created
+2025-05-14 18:47:27,278 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-14 18:47:27,278 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-14 18:47:27,281 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-14 18:47:27,284 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-14 18:47:27,287 - fleetserverapi - INFO - Startup Complete
+2025-05-14 18:51:44,081 - fleetserverapi - INFO - Post endpoint hit
+2025-05-14 18:51:44,082 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-14 18:51:44,083 - fleetserverapi - INFO - Begins summarizing
+2025-05-14 18:52:09,881 - fleetserverapi - INFO - Completes Summarizationn
+2025-05-14 18:52:39,377 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-14 18:53:38,057 - fleetserverapi - INFO - GenAI client obtained from session_globals
+2025-05-14 18:53:38,976 - fleetserverapi - INFO - Context cache created: cachedContents/xxr9btef532yxldcijr46rd3fnct5jauoot817u3
+2025-05-14 18:53:51,956 - fleetserverapi - INFO - Prompt task for ID 9db2e2e8-44c8-4f2f-8eda-ab1324007c17 completed successfully.
+2025-05-14 18:53:51,957 - fleetserverapi - INFO - Prompt task for ID 2f96fbcb-93c2-4cc1-a65b-9088ff542aea completed successfully.
+2025-05-14 18:53:51,959 - fleetserverapi - INFO - Prompt task for ID f79fcd68-a923-460d-879a-e9f88d589936 completed successfully.
+2025-05-14 18:53:51,960 - fleetserverapi - INFO - Prompt task for ID e8e57b89-9ddf-4edb-b5aa-116871cf5df9 completed successfully.
+2025-05-14 18:53:51,961 - fleetserverapi - INFO - Prompt task for ID affd52f2-b878-4f07-b1be-0a5307f7ae79 completed successfully.
+2025-05-14 18:53:51,963 - fleetserverapi - INFO - Prompt iteration finished: All 5 prompts processed successfully.
+2025-05-14 18:53:51,964 - fleetserverapi - INFO - Prompt iteration completed
+2025-05-14 18:53:51,965 - fleetserverapi - INFO - Attempting to delete GENAI cache 'cachedContents/xxr9btef532yxldcijr46rd3fnct5jauoot817u3'
+2025-05-14 18:53:52,358 - fleetserverapi - INFO - Stored vector:
+2025-05-14 18:53:52,360 - fleetserverapi - INFO - Entered store in sqlite
+2025-05-14 18:53:52,386 - fleetserverapi - INFO - Object CONTEXT :: b0e4074d-91d4-4d1c-9241-8657a93ed5b0 stored in sqlite
+2025-05-14 18:53:52,394 - fleetserverapi - ERROR - Lance storage error: object of type 'NoneType' has no len()
+2025-05-14 18:53:52,398 - fleetserverapi - ERROR - Lance storage error: Column 1 named vector_short expected length 36 but got length 1
+2025-05-14 18:53:52,399 - fleetserverapi - ERROR - Lance storage error: Column 1 named vector_short expected length 36 but got length 1
+2025-05-14 18:53:52,401 - fleetserverapi - ERROR - Lance storage error: Column 1 named vector_short expected length 36 but got length 1
+2025-05-14 18:53:52,403 - fleetserverapi - ERROR - Lance storage error: Column 1 named vector_short expected length 36 but got length 1
+2025-05-14 18:53:52,406 - fleetserverapi - WARNING - Main endpoint failure: 1 validation error for SqlitePromptStorage
+id
+  Field required [type=missing, input_value={'external_id': '9db2e2e8...might not hold true."}'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-05-14 19:09:39,575 - fleetserverapi - INFO - Shutting down application.
+2025-05-14 19:09:39,576 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

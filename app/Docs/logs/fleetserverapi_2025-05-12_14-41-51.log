@@ -1,0 +1,22 @@
+2025-05-12 14:41:51,824 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 14:41:51,824 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 14:41:51,825 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 14:41:51,825 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 14:41:51,828 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 14:41:51,829 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 14:41:51,831 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 14:41:51,832 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 14:41:53,413 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 14:41:56,827 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 14:41:56,828 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 14:41:56,829 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 14:41:56,836 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 14:41:56,843 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 14:41:56,849 - fleetserverapi - INFO - Startup Complete
+2025-05-12 14:42:15,309 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 14:42:15,310 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 14:42:48,242 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-12 14:42:49,635 - fleetserverapi - ERROR - Error populating response model: cannot access local variable 'vector_short' where it is not associated with a value
+2025-05-12 14:42:49,636 - fleetserverapi - WARNING - Main endpoint failure: 500: Error populating response model
+2025-05-12 14:43:26,741 - fleetserverapi - INFO - Shutting down application.
+2025-05-12 14:43:26,741 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared

@@ -1,0 +1,35 @@
+2025-05-13 09:18:43,764 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-13 09:18:43,765 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-13 09:18:43,765 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-13 09:18:43,765 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-13 09:18:43,767 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-13 09:18:43,767 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-13 09:18:43,769 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-13 09:18:43,833 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-13 09:18:46,225 - fleetserverapi - INFO - Short embedding model created
+2025-05-13 09:18:49,680 - fleetserverapi - INFO - Long embedding model created
+2025-05-13 09:18:49,681 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-13 09:18:49,681 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-13 09:18:49,684 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-13 09:18:49,688 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-13 09:18:49,690 - fleetserverapi - INFO - Startup Complete
+2025-05-13 09:19:25,018 - fleetserverapi - INFO - Post endpoint hit
+2025-05-13 09:19:25,018 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-13 09:19:25,019 - fleetserverapi - INFO - Begins summarizing
+2025-05-13 09:19:46,418 - fleetserverapi - WARNING - Main endpoint failure: 503: Service unavailable
+2025-05-13 09:19:49,945 - fleetserverapi - INFO - Post endpoint hit
+2025-05-13 09:19:49,946 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-13 09:19:49,947 - fleetserverapi - INFO - Begins summarizing
+2025-05-13 09:19:58,996 - fleetserverapi - INFO - Post endpoint hit
+2025-05-13 09:19:58,997 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-13 09:19:58,997 - fleetserverapi - INFO - Begins summarizing
+2025-05-13 09:20:10,800 - fleetserverapi - WARNING - Main endpoint failure: 503: Service unavailable
+2025-05-13 09:20:19,911 - fleetserverapi - WARNING - Main endpoint failure: 503: Service unavailable
+2025-05-13 09:20:33,409 - fleetserverapi - INFO - Post endpoint hit
+2025-05-13 09:20:33,410 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-13 09:20:33,410 - fleetserverapi - INFO - Begins summarizing
+2025-05-13 09:20:54,575 - fleetserverapi - WARNING - Main endpoint failure: 503: Service unavailable
+2025-05-13 09:21:24,624 - fleetserverapi - INFO - Post endpoint hit
+2025-05-13 09:21:24,625 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-13 09:21:24,625 - fleetserverapi - INFO - Begins summarizing
+2025-05-13 09:21:45,769 - fleetserverapi - WARNING - Main endpoint failure: 503: Service unavailable

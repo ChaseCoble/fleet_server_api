@@ -1,0 +1,24 @@
+2025-05-12 19:42:04,030 - fleetserverapi - INFO - LANCEDB_URI is ../databases/lance
+2025-05-12 19:42:04,030 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-12 19:42:04,030 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-12 19:42:04,031 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-12 19:42:04,033 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-12 19:42:04,033 - fleetserverapi - INFO - Sqlite database uri is ../databases/sqlite
+2025-05-12 19:42:04,035 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-12 19:42:04,038 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-12 19:42:05,964 - fleetserverapi - INFO - Short embedding model created
+2025-05-12 19:42:09,378 - fleetserverapi - INFO - Long embedding model created
+2025-05-12 19:42:09,379 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-12 19:42:09,380 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-12 19:42:09,388 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-12 19:42:09,395 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-12 19:42:09,400 - fleetserverapi - INFO - Startup Complete
+2025-05-12 19:42:18,080 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 19:42:18,088 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 19:42:20,591 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-12 19:42:22,753 - fleetserverapi - INFO - GenAI client initialized
+2025-05-12 19:42:23,234 - fleetserverapi - ERROR - Failure to query Gemini model: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'Cached content is too small. total_token_count=211, min_total_token_count=32768', 'status': 'INVALID_ARGUMENT'}}
+2025-05-12 19:42:23,235 - fleetserverapi - WARNING - Main endpoint failure: 500: Failure to query Gemini model
+2025-05-12 19:44:04,132 - fleetserverapi - INFO - Post endpoint hit
+2025-05-12 19:44:06,701 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-12 19:44:31,381 - fleetserverapi - WARNING - Main endpoint failure: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-1.5-flash'}, 'quotaValue': '15'}]}, {'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '28s'}]}}

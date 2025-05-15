@@ -1,2 +1,5 @@
 .env
 dockerfile
+cert.pem
+key.pem
+databases

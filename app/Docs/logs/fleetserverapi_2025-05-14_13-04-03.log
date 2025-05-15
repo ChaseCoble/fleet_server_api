@@ -1,0 +1,56 @@
+2025-05-14 13:04:04,183 - fleetserverapi - INFO - LANCEDB_URI is databases/lance
+2025-05-14 13:04:04,184 - fleetserverapi - INFO - Short embedding model name is all-MiniLM-L6-v2
+2025-05-14 13:04:04,184 - fleetserverapi - INFO - Long embedding model name is nomic-ai/nomic-embed-text-v1.5
+2025-05-14 13:04:04,184 - fleetserverapi - INFO - Connecting to LanceDB.
+2025-05-14 13:04:04,187 - fleetserverapi - INFO - Begin connecting to sqlite
+2025-05-14 13:04:04,187 - fleetserverapi - INFO - Sqlite database uri is databases/sqlite/text_content_reference.db
+2025-05-14 13:04:04,190 - fleetserverapi - INFO - LanceDB connection successful.
+2025-05-14 13:04:04,230 - fleetserverapi - INFO - Loading Embedding model: 
+2025-05-14 13:04:05,725 - fleetserverapi - INFO - Short embedding model created
+2025-05-14 13:04:09,275 - fleetserverapi - INFO - Long embedding model created
+2025-05-14 13:04:09,276 - fleetserverapi - INFO - Embedding Models Loaded: Vector Dimension: 384 and 768
+2025-05-14 13:04:09,276 - fleetserverapi - INFO - Creating or opening table: content_vector_data
+2025-05-14 13:04:09,279 - fleetserverapi - INFO - Table content_vector_data opened successfully
+2025-05-14 13:04:09,280 - fleetserverapi - WARNING - Existing content_vector_data Table does not match lancedb schema
+2025-05-14 13:04:09,282 - fleetserverapi - INFO - Table context_vector_data opened successfully
+2025-05-14 13:04:09,282 - fleetserverapi - WARNING - Existing content_vector_data Table schema mismatch.
+2025-05-14 13:04:09,283 - fleetserverapi - WARNING -   Current Schema: id: string
+vector_short: fixed_size_list<item: float>[384]
+  child 0, item: float
+vector_long: fixed_size_list<item: float>[768]
+  child 0, item: float
+doc_id: string
+2025-05-14 13:04:09,283 - fleetserverapi - WARNING -   Expected Schema: id: string
+vector_short: list<item: float>
+  child 0, item: float
+vector_long: list<item: float>
+  child 0, item: float
+doc_id: string
+2025-05-14 13:04:09,285 - fleetserverapi - INFO - Startup Complete
+2025-05-14 13:04:33,812 - fleetserverapi - INFO - Post endpoint hit
+2025-05-14 13:04:33,812 - fleetserverapi - INFO - Create retrieve context id called
+2025-05-14 13:04:33,813 - fleetserverapi - INFO - Begins summarizing
+2025-05-14 13:05:06,121 - fleetserverapi - INFO - Completes Summarizationn
+2025-05-14 13:05:35,291 - fleetserverapi - INFO - Cache hit for request 'Please provide the text you would like me to summa...' with distance 6.7543
+2025-05-14 13:05:35,297 - fleetserverapi - INFO - Populate_response_dict called
+2025-05-14 13:06:35,877 - fleetserverapi - INFO - GenAI client obtained from session_globals
+2025-05-14 13:06:37,010 - fleetserverapi - INFO - Context cache created: cachedContents/b7h5g3y2jnw44ywhi4sbmjn71gf744kaa8zefwdo
+2025-05-14 13:06:51,751 - fleetserverapi - INFO - Prompt task for ID fd0d63f4-d895-4781-a6d6-2de1250d4cb8 completed successfully.
+2025-05-14 13:06:51,751 - fleetserverapi - INFO - Prompt task for ID eaf3d8d9-edb0-449a-be59-e4bd80b2a97a completed successfully.
+2025-05-14 13:06:51,751 - fleetserverapi - INFO - Prompt task for ID eb429f55-c648-4d76-b7ad-b04a0487b7b4 completed successfully.
+2025-05-14 13:06:51,752 - fleetserverapi - INFO - Prompt task for ID c8c9599d-5480-43ba-83a1-2babbf7a49c9 completed successfully.
+2025-05-14 13:06:51,753 - fleetserverapi - INFO - Prompt task for ID 9dd09f4d-508b-4c7a-8b6b-f632153aa81d completed successfully.
+2025-05-14 13:06:51,753 - fleetserverapi - INFO - Prompt iteration finished: All 5 prompts processed successfully.
+2025-05-14 13:06:51,754 - fleetserverapi - INFO - Prompt iteration completed
+2025-05-14 13:06:51,754 - fleetserverapi - INFO - Attempting to delete GENAI cache 'cachedContents/b7h5g3y2jnw44ywhi4sbmjn71gf744kaa8zefwdo'
+2025-05-14 13:06:52,149 - fleetserverapi - ERROR - Lance storage error: object of type 'NoneType' has no len()
+2025-05-14 13:06:52,153 - fleetserverapi - ERROR - Lance storage error: cannot access local variable 'lancedb_storage_dict' where it is not associated with a value
+2025-05-14 13:06:52,164 - fleetserverapi - ERROR - Lance storage error: cannot access local variable 'lancedb_storage_dict' where it is not associated with a value
+2025-05-14 13:06:52,169 - fleetserverapi - ERROR - Lance storage error: cannot access local variable 'lancedb_storage_dict' where it is not associated with a value
+2025-05-14 13:06:52,171 - fleetserverapi - ERROR - Lance storage error: cannot access local variable 'lancedb_storage_dict' where it is not associated with a value
+2025-05-14 13:06:52,173 - fleetserverapi - WARNING - Main endpoint failure: 1 validation error for SqlitePromptStorage
+id
+  Field required [type=missing, input_value={'external_id': 'fd0d63f4... in complex systems."}'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-05-14 13:08:13,396 - fleetserverapi - INFO - Shutting down application.
+2025-05-14 13:08:13,397 - fleetserverapi - INFO - LanceDB Connection closed, global session state cleared
